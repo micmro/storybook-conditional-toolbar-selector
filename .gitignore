@@ -1,0 +1,15 @@
+node_modules
+npm-shrinkwrap.json
+.vscode
+dist
+.tern-port
+*.DS_Store
+.cache
+coverage/
+.idea
+build
+packs/*.tgz
+.nvmrc
+storybook-static
+.jest-test-results.json
+.eslintcache
