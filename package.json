@@ -1,5 +1,5 @@
 {
-  "name": "conditional-toolbar-selector",
+  "name": "storybook-conditional-toolbar-selector",
   "version": "1.0.0",
   "description": "Helper Storybook addon to define story specific toolbar dropdown to use in custom decorators",
   "main": "dist/preset.js",

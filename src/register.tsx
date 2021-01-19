@@ -1,21 +1,16 @@
-import React from "react";
-import { addons, types } from "@storybook/addons";
-import { AddonPanel } from "@storybook/components";
+import * as React from "react";
+import addons, { types } from "@storybook/addons";
 
-const ADDON_ID = "myaddon";
-const PANEL_ID = `${ADDON_ID}/panel`;
+import { ADDON_ID, PARAM_KEY } from "./constants";
 
-// give a unique name for the panel
-const MyPanel = () => <div>MyAddon</div>;
+import { Selector } from "./containers/Selector";
 
-addons.register(ADDON_ID, (api) => {
-  addons.add(PANEL_ID, {
-    type: types.PANEL,
-    title: "My Addon",
-    render: ({ active, key }) => (
-      <AddonPanel active={active} key={key}>
-        <MyPanel />
-      </AddonPanel>
-    ),
+addons.register(ADDON_ID, () => {
+  addons.add(ADDON_ID, {
+    title: "Custom Toolbar Selector",
+    type: types.TOOL,
+    match: ({ viewMode }) => viewMode === "story",
+    render: () => <Selector />,
+    paramKey: PARAM_KEY,
   });
 });
