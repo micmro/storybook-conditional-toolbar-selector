@@ -40,6 +40,8 @@ export type ConditionalToolbarSelectorParameter = {
 export type StoryThemeSetParameter = {
   /** Set to pick the theme from */
   setToUse?: string | null;
+  /** default option to select */
+  defaultOption?: string | null;
 };
 
 export type RuntimeSettings = Required<ConditionalToolbarSelectorParameter> &

@@ -23,6 +23,7 @@ Define available sets and options in `.storybook/preview.js` or `.storybook/prev
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   customConditionalToolbar: {
+    /** Defines the possible sets that can be shown */
     sets: [
       {
         id: "set-a",
@@ -35,11 +36,18 @@ export const parameters = {
         id: "set-b",
         options: [{ id: "b1", title: "Set B Option 1" }, { id: "b2" }],
       },
-    ], // define the possible sets that can be shown
-    icon: "redirect", // icon to use in toolbar. All possible icons here: https://storybookjs.netlify.app/official-storybook/?path=/story/basics-icon--labels
-    title: "Test title", // title when hovering over the icon
+    ],
+    /** Icon to use in toolbar, defaults to `switchalt`. All possible icons here: https://storybookjs.netlify.app/official-storybook/?path=/story/basics-icon--labels */
+    icon: "redirect",
+    /** title when hovering over the icon */
+    title: "Test title",
+    /** Setting disable to true makes the addon disabled by default */
+    // disable: true,
   },
 };
 ```
 
 ### Consumption
+
+- Per Set selection persists across stories until refresh/reload of storybook
+-

@@ -18,7 +18,7 @@ export const Selector: React.FC = memo(() => {
   const [globals, updateGlobals] = useGlobals();
   const globalState: GlobalState = globals[PARAM_KEY] || {};
   const currentSetId = config.setToUse || config.default;
-  const selectedOptionId = globalState[currentSetId];
+  const selectedOptionId = globalState[currentSetId] || config.defaultOption;
   const selectedSet = config.sets.find((s) => s.id === currentSetId);
 
   const onSelectorChange = useCallback(

@@ -3,6 +3,7 @@ import { ConditionalToolbarSelectorParameter } from "../src/types";
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   customConditionalToolbar: {
+    /** Defines the possible sets that can be shown */
     sets: [
       {
         id: "set-a",
@@ -16,8 +17,10 @@ export const parameters = {
         options: [{ id: "b1", title: "Set B Option 1" }, { id: "b2" }],
       },
     ],
+    /** Icon to use in toolbar, defaults to `switchalt`. All possible icons here: https://storybookjs.netlify.app/official-storybook/?path=/story/basics-icon--labels */
     icon: "redirect",
+    /** title when hovering over the icon */
     title: "Test title",
-    // disable: false,
+    // disable: true, // setting this makes the addon disabled by default
   } as ConditionalToolbarSelectorParameter,
 };

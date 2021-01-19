@@ -33,10 +33,10 @@ Disabled.parameters = {
 
 export const UsingSetA = Template.bind({});
 UsingSetA.args = {
-  label: "Using Set A / np default set",
+  label: "Using Set A / no default set",
 };
 UsingSetA.parameters = {
-  customConditionalToolbar: { setToUse: "set-a" },
+  customConditionalToolbar: { setToUse: "set-a", disable: false },
 };
 
 export const UsingSetB = Template.bind({});
@@ -44,15 +44,15 @@ UsingSetB.args = {
   label: "Using Set B / default to option b2",
 };
 UsingSetB.parameters = {
-  customConditionalToolbar: { setToUse: "set-b", default: "b2" },
+  customConditionalToolbar: { setToUse: "set-b", defaultOption: "b2" },
 };
 
 export const InvalidSet = Template.bind({});
 InvalidSet.args = {
-  label: "Invalid Set selected",
+  label: "Invalid Set selected / see error in the console",
 };
 InvalidSet.parameters = {
-  customConditionalToolbar: { setToUse: "set-x", default: "Option-B2" },
+  customConditionalToolbar: { setToUse: "set-x", defaultOption: "x1" },
 };
 
 export const NotSet = Template.bind({});
