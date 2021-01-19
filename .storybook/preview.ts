@@ -1,23 +1,19 @@
-import { PARAM_KEY } from "../src/constants";
 import { ConditionalToolbarSelectorParameter } from "../src/types";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
-  [PARAM_KEY]: {
+  customConditionalToolbar: {
     sets: [
       {
         id: "set-a",
         options: [
-          { id: "Option-A1", title: "Option-A1 title" },
-          { id: "Option-A3" },
+          { id: "a1", title: "My First Option in Set A" },
+          { id: "a2", title: "My Second Option in Set B" },
         ],
       },
       {
         id: "set-b",
-        options: [
-          { id: "Option-B2", title: "Other Option B" },
-          { id: "Option-b3" },
-        ],
+        options: [{ id: "b1", title: "Set B Option 1" }, { id: "b2" }],
       },
     ],
     icon: "redirect",
