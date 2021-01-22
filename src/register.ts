@@ -1,1 +1,1 @@
-module.exports = require("./register.tsx");
+module.exports = require("./registerComponent");
