@@ -1,7 +1,7 @@
-export function config(entry = []) {
+export function config(entry: string[] = []) {
   return [...entry, require.resolve("./defaultParameters")];
 }
 
-export function managerEntries(entry = []) {
-  return [...entry, require.resolve("./register.tsx")]; //👈 addon implementation
+export function managerEntries(entry: string[] = []) {
+  return [...entry, require.resolve("./register.tsx")];
 }

@@ -2,6 +2,8 @@ import React from "react";
 import { Story, Meta } from "@storybook/react";
 
 import { SomeComponent, SomeComponentProps } from "./Example";
+import { RuntimeSettings } from "../src/types";
+// import { RuntimeSettings } from "storybook-conditional-toolbar-selector" in exported version
 
 export default {
   title: "Example",
@@ -28,7 +30,7 @@ Disabled.args = {
   label: "Disabled",
 };
 Disabled.parameters = {
-  customConditionalToolbar: { disable: true },
+  customConditionalToolbar: { disable: true } as RuntimeSettings,
 };
 
 export const UsingSetA = Template.bind({});
@@ -36,7 +38,10 @@ UsingSetA.args = {
   label: "Using Set A / no default set",
 };
 UsingSetA.parameters = {
-  customConditionalToolbar: { setToUse: "set-a", disable: false },
+  customConditionalToolbar: {
+    setToUse: "set-a",
+    disable: false,
+  } as RuntimeSettings,
 };
 
 export const UsingSetB = Template.bind({});
@@ -44,7 +49,10 @@ UsingSetB.args = {
   label: "Using Set B / default to option b2",
 };
 UsingSetB.parameters = {
-  customConditionalToolbar: { setToUse: "set-b", defaultOption: "b2" },
+  customConditionalToolbar: {
+    setToUse: "set-b",
+    defaultOption: "b2",
+  } as RuntimeSettings,
 };
 
 export const InvalidSet = Template.bind({});
@@ -52,7 +60,10 @@ InvalidSet.args = {
   label: "Invalid Set selected / see error in the console",
 };
 InvalidSet.parameters = {
-  customConditionalToolbar: { setToUse: "set-x", defaultOption: "x1" },
+  customConditionalToolbar: {
+    setToUse: "set-x",
+    defaultOption: "x1",
+  } as RuntimeSettings,
 };
 
 export const NotSet = Template.bind({});
@@ -60,5 +71,5 @@ NotSet.args = {
   label: "Not Set / Defaulting to Set A",
 };
 NotSet.parameters = {
-  customConditionalToolbar: {},
+  customConditionalToolbar: {} as RuntimeSettings,
 };

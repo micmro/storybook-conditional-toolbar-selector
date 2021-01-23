@@ -18,11 +18,15 @@ export const Selector: React.FC = memo(() => {
   const [globals, updateGlobals] = useGlobals();
   const globalState: GlobalState = globals[PARAM_KEY] || {};
   const currentSetId = config.setToUse || config.default;
-  const selectedOptionId = globalState[currentSetId] || config.defaultOption;
+  const selectedOptionId =
+    (currentSetId && globalState[currentSetId]) || config.defaultOption;
   const selectedSet = config.sets.find((s) => s.id === currentSetId);
 
   const onSelectorChange = useCallback(
     (selectedThemeId: string) => {
+      if (!selectedSet) {
+        return;
+      }
       updateGlobals({
         [PARAM_KEY]: {
           ...globalState,
@@ -87,8 +91,8 @@ export const Selector: React.FC = memo(() => {
             }
             onHide();
           };
-          const selectorItems = selectedSet?.options?.map(
-            ({ id, title = id, left, right }) => ({
+          const selectorItems =
+            selectedSet?.options?.map(({ id, title = id, left, right }) => ({
               id,
               title,
               left,
@@ -96,8 +100,7 @@ export const Selector: React.FC = memo(() => {
               onClick: () => onClick(id),
               value: id,
               active: id === activeOption?.id,
-            })
-          );
+            })) || [];
           return <TooltipLinkList links={selectorItems} />;
         }}
       >

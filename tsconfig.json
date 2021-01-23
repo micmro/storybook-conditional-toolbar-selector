@@ -1,26 +1,16 @@
 {
-  "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "src/",
-    "incremental": false,
-    "noImplicitAny": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "jsx": "react",
-    "module": "commonjs",
-    "skipDefaultLibCheck": true,
-    "skipLibCheck": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
     "target": "es5",
-    "lib": ["es2017", "dom"]
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "jsx": "react",
+    "declaration": true
   },
-  "exclude": [
-    "**/dist",
-    "node_modules",
-    "**/node_modules",
-    "**/*.spec.ts",
-    "**/__tests__",
-    "**/*.test.ts"
-  ]
+  "include": ["src/**/*"]
 }

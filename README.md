@@ -13,7 +13,10 @@ register addon in `.storybook/main.js` or `.storybook/main.ts`
 ```javascript
 module.exports = {
   stories: ["../stories/**/*.stories.@(js|jsx|ts|tsx)"],
-  addons: ["....."], // add here
+  addons: [
+    "storybook-conditional-toolbar-selector", // add here
+    /// ...
+  ],
 };
 ```
 
@@ -46,6 +49,20 @@ export const parameters = {
   },
 };
 ```
+
+Use the `customConditionalToolbar` parameter in you story to define if and which set to use:
+
+```javascript
+export const MyStory = Template.bind({});
+MyStory.parameters = {
+  customConditionalToolbar: {
+    setToUse: "set-b",
+    defaultOption: "b2",
+  },
+};
+```
+
+### Story Parameter API
 
 ### Consumption
 
