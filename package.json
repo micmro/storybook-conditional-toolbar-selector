@@ -10,10 +10,16 @@
   ],
   "keywords": [
     "storybook",
-    "addons"
+    "addons",
+    "menu",
+    "toolbar"
   ],
   "author": "Michael Mrowetz",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/micmro/storybook-conditional-toolbar-selector.git"
+  },
   "devDependencies": {
     "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
