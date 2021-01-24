@@ -37,7 +37,7 @@ export type ConditionalToolbarSelectorParameter = {
 };
 
 /** Parameter-type to be provided by Story */
-export type StoryThemeSetParameter = {
+type StoryParameterOnly = {
   /** Set to pick the theme from */
   setToUse?: string | null;
   /** default option to select */
@@ -45,4 +45,7 @@ export type StoryThemeSetParameter = {
 };
 
 export type RuntimeSettings = Required<ConditionalToolbarSelectorParameter> &
-  StoryThemeSetParameter;
+  StoryParameterOnly;
+
+export type CustomConditionalToolbarStoryParameter = Partial<ConditionalToolbarSelectorParameter> &
+  StoryParameterOnly;

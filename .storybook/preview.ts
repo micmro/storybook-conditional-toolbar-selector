@@ -1,4 +1,6 @@
 import { ConditionalToolbarSelectorParameter } from "../src/types";
+// when consuming the published version you can get the `ConditionalToolbarSelectorParameter` types above via:
+// import { ConditionalToolbarSelectorParameter } from "storybook-conditional-toolbar-selector"
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

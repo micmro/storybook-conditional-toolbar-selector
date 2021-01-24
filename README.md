@@ -4,21 +4,37 @@ Helper addon to define story specific toolbar dropdown to use in custom decorato
 
 e.g. for multiple sets of themes backend editor vs frontend site, property specific components
 
-## Example usage
+&nbsp;
 
-### Setup
+## Setup / Usage
+
+With npm:
+
+```bash
+npm install --save-dev storybook-conditional-toolbar-selector
+```
+
+With yarn:
+
+```bash
+yarn add -D storybook-conditional-toolbar-selector
+```
+
+&nbsp;
 
 register addon in `.storybook/main.js` or `.storybook/main.ts`
 
 ```javascript
 module.exports = {
-  stories: ["../stories/**/*.stories.@(js|jsx|ts|tsx)"],
+  // ...
   addons: [
-    "storybook-conditional-toolbar-selector", // add here
-    /// ...
+    "storybook-conditional-toolbar-selector",
+    // ...
   ],
 };
 ```
+
+&nbsp;
 
 Define available sets and options in `.storybook/preview.js` or `.storybook/preview.ts`
 
@@ -50,6 +66,10 @@ export const parameters = {
 };
 ```
 
+[typescript example with types](https://github.com/micmro/storybook-conditional-toolbar-selector/blob/main/.storybook/preview.ts)
+
+&nbsp;
+
 Use the `customConditionalToolbar` parameter in you story to define if and which set to use:
 
 ```javascript
@@ -62,9 +82,53 @@ MyStory.parameters = {
 };
 ```
 
-### Story Parameter API
+[typescript examples](https://github.com/micmro/storybook-conditional-toolbar-selector/blob/main/stories/Example.stories.tsx)
 
-### Consumption
+&nbsp;
+
+## Preview Parameters API (Global)
+
+```typescript
+{
+  /** Title for the toolbar icon - (Optional) */
+  title?: string;
+
+  /** Icon to use in toolbar, defaults to `switchalt`. All possible icons here: https://storybookjs.netlify.app/official-storybook/?path=/story/basics-icon--labels - (Optional) */
+  icon?: IconsProps["icon"];
+
+  /** Sets of dropdown options */
+  sets: DropdownSet[];
+
+  /** Default set to use `null | undefined` do disable theme selection if not explicitly set - (Optional) */
+  default?: string | null;
+
+  /** If nothing is selected the first option is auto-selected - defaults to `true` - (Optional)*/
+  autoSelectFirstOption?: boolean;
+
+  /** If `true` toolbar item is disabled (hidden) - (Optional) */
+  disable?: boolean;
+};
+```
+
+[Typescript type `ConditionalToolbarSelectorParameter`](https://github.com/micmro/storybook-conditional-toolbar-selector/blob/main/src/types.ts)
+
+## Story Parameter API (Per Story)
+
+All options that _Preview Parameters API (Global)_ provides (all as optional) plus the options below:
+
+```typescript
+{
+  /** Set to pick the theme from - (Optional)*/
+  setToUse?: string | null;
+
+  /** default option to select - (Optional) */
+  defaultOption?: string | null;
+}
+```
+
+[Typescript type `CustomConditionalToolbarStoryParameter`](https://github.com/micmro/storybook-conditional-toolbar-selector/blob/main/src/types.ts)
+
+## Consumption
 
 - Per Set selection persists across stories until refresh/reload of storybook
 -
