@@ -10,7 +10,10 @@
     "moduleResolution": "node",
     "noEmit": true,
     "jsx": "react",
-    "declaration": true
+    "declaration": true,
+    "paths": {
+      "./registerComponent": ["./registerComponent.tsx"]
+    }
   },
   "include": ["src/**/*"]
 }

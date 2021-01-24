@@ -1,7 +1,7 @@
 import React from "react";
 import { Icons, IconButton } from "@storybook/components";
 
-import { RuntimeSettings } from "../types";
+import type { RuntimeSettings } from "../types";
 
 export const Toggler: React.FC<{
   active: boolean;

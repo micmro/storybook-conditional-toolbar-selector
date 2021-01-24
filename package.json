@@ -1,6 +1,6 @@
 {
   "name": "storybook-conditional-toolbar-selector",
-  "version": "0.1.0-alpha-2",
+  "version": "0.1.0-alpha-4",
   "description": "Helper Storybook addon to define story specific toolbar dropdown to use in custom decorators",
   "main": "dist/preset.js",
   "types": "dist/@types/types",
@@ -46,9 +46,10 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "rm -rf dist && npm run build:files && npm run build:types",
+    "build": "NODE_ENV=production rm -rf dist && npm run build:files && npm run build:types",
     "build:files": "babel ./src --out-dir ./dist --extensions .ts --extensions .tsx --ignore src/types.ts",
     "build:types": "rm -rf dist/@types && tsc --noEmit false --emitDeclarationOnly --outDir ./dist/@types",
+    "clean": "rm -rf ./node_modules/.cache dist",
     "typecheck": "tsc --noEmit",
     "prepublish": "npm run typecheck && npm run build"
   },

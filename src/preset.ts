@@ -3,5 +3,5 @@ export function config(entry: string[] = []) {
 }
 
 export function managerEntries(entry: string[] = []) {
-  return [...entry, require.resolve("./registerComponent.tsx")];
+  return [...entry, require.resolve("./register")];
 }

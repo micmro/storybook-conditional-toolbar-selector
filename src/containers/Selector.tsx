@@ -3,7 +3,7 @@ import { WithTooltip, TooltipLinkList } from "@storybook/components";
 import { useGlobals, useParameter } from "@storybook/api";
 
 import { DEFAULT_CONFIG, PARAM_KEY } from "../constants";
-import { RuntimeSettings } from "../types";
+import type { RuntimeSettings } from "../types";
 import { Toggler } from "./Toggler";
 
 /** Global state setting */
