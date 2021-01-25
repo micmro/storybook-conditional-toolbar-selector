@@ -1,18 +1,18 @@
-import React from "react";
-import { Icons, IconButton } from "@storybook/components";
+import React from 'react';
+import { Icons, IconButton } from '@storybook/components';
 
-import type { RuntimeSettings } from "../types";
+import type { RuntimeSettings } from '../types';
 
 export const Toggler: React.FC<{
   active: boolean;
   disabled?: boolean;
-  icon?: RuntimeSettings["icon"];
+  icon?: RuntimeSettings['icon'];
   title?: string;
 }> = ({
   active,
   disabled = false,
-  title = "Select an option",
-  icon = "switchalt",
+  title = 'Select an option',
+  icon = 'switchalt',
 }) => (
   <IconButton
     disabled={disabled}

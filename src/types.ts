@@ -1,4 +1,4 @@
-import type { IconsProps } from "@storybook/components";
+import type { IconsProps } from '@storybook/components';
 
 /** Definition of a dropdown item */
 export type DropdownOption = {
@@ -25,7 +25,7 @@ export type ConditionalToolbarSelectorParameter = {
   /** Title for the toolbar icon */
   title?: string;
   /** defaults to `switchalt`, all options: https://next--storybookjs.netlify.app/official-storybook/?path=/story/basics-icon--labels */
-  icon?: IconsProps["icon"];
+  icon?: IconsProps['icon'];
   /** Sets of dropdown options */
   sets: DropdownSet[];
   /** Default set to use `null | undefined` do disable theme selection if not explicitly set */

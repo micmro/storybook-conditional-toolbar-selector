@@ -1,1 +1,1 @@
-module.exports = require("./registerComponent");
+module.exports = require('./registerComponent');

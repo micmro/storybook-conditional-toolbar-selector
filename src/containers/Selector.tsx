@@ -1,10 +1,10 @@
-import React, { memo, useCallback } from "react";
-import { WithTooltip, TooltipLinkList } from "@storybook/components";
-import { useGlobals, useParameter } from "@storybook/api";
+import React, { memo, useCallback } from 'react';
+import { WithTooltip, TooltipLinkList } from '@storybook/components';
+import { useGlobals, useParameter } from '@storybook/api';
 
-import { DEFAULT_CONFIG, PARAM_KEY } from "../constants";
-import type { RuntimeSettings } from "../types";
-import { Toggler } from "./Toggler";
+import { DEFAULT_CONFIG, PARAM_KEY } from '../constants';
+import type { RuntimeSettings } from '../types';
+import { Toggler } from './Toggler';
 
 /** Global state setting */
 type GlobalState = {

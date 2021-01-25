@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 export function config(entry: string[] = []) {
-  return [...entry, require.resolve("./defaultParameters")];
+  return [...entry, require.resolve('./defaultParameters')];
 }
 
 export function managerEntries(entry: string[] = []) {
-  return [...entry, require.resolve("./register")];
+  return [...entry, require.resolve('./register')];
 }
