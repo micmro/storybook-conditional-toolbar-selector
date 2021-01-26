@@ -1,3 +1,5 @@
+import { withExampleDecorator } from './withExampleDecorator';
+
 import { ConditionalToolbarSelectorParameter } from '../src/types';
 // when consuming the published version you can get the `ConditionalToolbarSelectorParameter` types above via:
 // import { ConditionalToolbarSelectorParameter } from "storybook-conditional-toolbar-selector"
@@ -26,3 +28,5 @@ export const parameters = {
     // disable: true, // setting this makes the addon disabled by default
   } as ConditionalToolbarSelectorParameter,
 };
+
+export const decorators = [withExampleDecorator];
