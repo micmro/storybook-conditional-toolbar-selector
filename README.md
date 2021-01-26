@@ -130,5 +130,9 @@ All options that _Preview Parameters API (Global)_ provides (all as optional) pl
 
 ## Consumption
 
+Notes:
+
 - Per Set selection persists across stories until refresh/reload of storybook
--
+- If needed the defaults and fallbacks need to be set manually ([Example](https://github.com/micmro/storybook-conditional-toolbar-selector/blob/main/.storybook/withExampleDecorator.tsx#L5-L15))
+
+Example consumption in a decorator: https://github.com/micmro/storybook-conditional-toolbar-selector/blob/main/.storybook/withExampleDecorator.tsx
