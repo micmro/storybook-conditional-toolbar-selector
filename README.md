@@ -4,6 +4,8 @@ Helper addon to define story specific toolbar dropdown to use in custom decorato
 
 e.g. for multiple sets of themes backend editor vs frontend site, property specific components
 
+![screenshot of the selector](../media/selector-screenshot.png?raw=true)
+
 &nbsp;
 
 ## Setup / Usage
