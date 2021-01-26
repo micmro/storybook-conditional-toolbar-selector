@@ -1,3 +1,5 @@
+![Logo](../media/storybook-conditional-toolbar-selector.svg?raw=true)
+
 # storybook-conditional-toolbar-selector
 
 Helper addon to define story specific toolbar dropdown to use in custom decorators, similar to [globals](https://storybook.js.org/docs/react/essentials/toolbars-and-globals) but with multiple variants.
