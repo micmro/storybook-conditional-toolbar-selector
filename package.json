@@ -15,7 +15,8 @@
     "menu",
     "toolbar",
     "customizable",
-    "customisable"
+    "customisable",
+    "Appearance"
   ],
   "author": "Michael Mrowetz",
   "license": "MIT",
