@@ -30,6 +30,8 @@ npm run build
 ## Publish
 
 ```bash
+npm version patch # or minor major
 # automatically runs the build via `prepublish` script
 npm publish
+git push --tags
 ```
