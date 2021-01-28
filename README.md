@@ -1,4 +1,4 @@
-![Logo](../media/storybook-conditional-toolbar-selector.svg?raw=true)
+![Logo](https://github.com/micmro/storybook-conditional-toolbar-selector/media/storybook-conditional-toolbar-selector.svg?raw=true)
 
 # storybook-conditional-toolbar-selector
 
@@ -6,7 +6,7 @@ Helper addon to define story specific toolbar dropdown to use in custom decorato
 
 e.g. for multiple sets of themes backend editor vs frontend site, property specific components
 
-![screenshot of the selector](../media/selector-screenshot.png?raw=true)
+![screenshot of the selector](https://github.com/micmro/storybook-conditional-toolbar-selector/media/selector-screenshot.png?raw=true)
 
 &nbsp;
 
