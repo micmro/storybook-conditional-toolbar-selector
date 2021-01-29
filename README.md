@@ -2,9 +2,9 @@
 
 # storybook-conditional-toolbar-selector
 
-Helper addon to define story specific toolbar dropdown to use in custom decorators, similar to [globals](https://storybook.js.org/docs/react/essentials/toolbars-and-globals) but with multiple variants.
+Helper Storybook addon to define story specific toolbar dropdown to use in custom decorators, similar to [globals](https://storybook.js.org/docs/react/essentials/toolbars-and-globals) but with multiple variants.
 
-e.g. for multiple sets of themes backend editor vs frontend site, property specific components
+E.g. for different sets of languages or themes available for backend vs public site specific stories or having some options not available on all stories.
 
 ![screenshot of the selector](https://github.com/micmro/storybook-conditional-toolbar-selector/blob/media/selector-screenshot.png?raw=true)
 
@@ -26,7 +26,7 @@ yarn add -D storybook-conditional-toolbar-selector
 
 &nbsp;
 
-register addon in `.storybook/main.js` or `.storybook/main.ts`
+Register addon in `.storybook/main.js` or `.storybook/main.ts`
 
 ```javascript
 module.exports = {
@@ -70,7 +70,7 @@ export const parameters = {
 };
 ```
 
-[typescript example with types](https://github.com/micmro/storybook-conditional-toolbar-selector/blob/main/.storybook/preview.ts)
+[Typescript example with types](https://github.com/micmro/storybook-conditional-toolbar-selector/blob/main/.storybook/preview.ts)
 
 &nbsp;
 
@@ -86,7 +86,7 @@ MyStory.parameters = {
 };
 ```
 
-[typescript examples](https://github.com/micmro/storybook-conditional-toolbar-selector/blob/main/stories/Example.stories.tsx)
+[Typescript examples](https://github.com/micmro/storybook-conditional-toolbar-selector/blob/main/stories/Example.stories.tsx)
 
 &nbsp;
 
@@ -140,4 +140,4 @@ Notes:
 - If needed the defaults and fallbacks need to be set manually ([Example](https://github.com/micmro/storybook-conditional-toolbar-selector/blob/main/.storybook/withExampleDecorator.tsx#L5-L15))
 - All examples are in react, but it should in theory work in all frameworks
 
-Example consumption in a decorator: https://github.com/micmro/storybook-conditional-toolbar-selector/blob/main/.storybook/withExampleDecorator.tsx
+[Example consumption in a decorator](https://github.com/micmro/storybook-conditional-toolbar-selector/blob/main/.storybook/withExampleDecorator.tsx)
